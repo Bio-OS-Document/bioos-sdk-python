@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Entry &#8212; bioos  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Resource" href="resource.html" />
+    <link rel="prev" title="Welcome to bioos’s documentation!" href="index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="resource.html" title="Resource"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to bioos’s documentation!"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">bioos  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Entry</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="entry">
+<h1>Entry<a class="headerlink" href="#entry" title="Permalink to this heading">¶</a></h1>
+<section id="bioos">
+<h2>bioos<a class="headerlink" href="#bioos" title="Permalink to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="bioos.bioos.login">
+<span class="sig-prename descclassname"><span class="pre">bioos.bioos.</span></span><span class="sig-name descname"><span class="pre">login</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">endpoint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">access_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">secret_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">region</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'cn-north-1'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#bioos.bioos.login" title="Permalink to this definition">¶</a></dt>
+<dd><p>Login to the given endpoint using specified account and password.</p>
+<p><strong>If bioos sdk runs inside the miracle private cloud env</strong> such as on a notebook under a
+workspace, the login procedure will be finished automatically.</p>
+<p><strong>If bioos sdk runs outside the miracle cloud env</strong> such as on user’s local machine,
+the login procedure should be explicitly executed.</p>
+<p><em>Example</em>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bioos</span><span class="o">.</span><span class="n">login</span><span class="p">(</span><span class="n">endpoint</span><span class="o">=</span><span class="s2">&quot;https://cloud.xxxxx.xxx.cn&quot;</span><span class="p">,</span><span class="n">access_key</span><span class="o">=</span><span class="s2">&quot;xxxxxxxx&quot;</span><span class="p">,</span><span class="n">secret_key</span><span class="o">=</span><span class="s2">&quot;xxxxxxxx&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>endpoint</strong> (<em>str</em>) – The environment to be logged in</p></li>
+<li><p><strong>access_key</strong> (<em>str</em>) – The specified account’s access key</p></li>
+<li><p><strong>secret_key</strong> (<em>str</em>) – Corresponding secret key of the access key</p></li>
+<li><p><strong>region</strong> (<em>str</em>) – The region to be logged in</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Login result</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bioos.bioos.status">
+<span class="sig-prename descclassname"><span class="pre">bioos.bioos.</span></span><span class="sig-name descname"><span class="pre">status</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">LoginInfo</span></span></span><a class="headerlink" href="#bioos.bioos.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the current login information.</p>
+<p><em>Example</em>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bioos</span><span class="o">.</span><span class="n">status</span><span class="p">()</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Current login information</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Config.LoginInfo</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bioos.bioos.list_workspaces">
+<span class="sig-prename descclassname"><span class="pre">bioos.bioos.</span></span><span class="sig-name descname"><span class="pre">list_workspaces</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="headerlink" href="#bioos.bioos.list_workspaces" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists all workspaces in the login environment .</p>
+<p><em>Example</em>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bioos</span><span class="o">.</span><span class="n">list_workspaces</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bioos.bioos.workspace">
+<span class="sig-prename descclassname"><span class="pre">bioos.bioos.</span></span><span class="sig-name descname"><span class="pre">workspace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id_</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="resource.html#bioos.resource.workspaces.Workspace" title="bioos.resource.workspaces.Workspace"><span class="pre">Workspace</span></a></span></span><a class="headerlink" href="#bioos.bioos.workspace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the workspace for the given name .</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>id</strong> (<em>str</em>) – Workspace id</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Specified workspace object</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="resource.html#bioos.resource.workspaces.Workspace" title="bioos.resource.workspaces.Workspace">Workspace</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bioos.bioos.utility">
+<span class="sig-prename descclassname"><span class="pre">bioos.bioos.</span></span><span class="sig-name descname"><span class="pre">utility</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="utility.html#bioos.resource.utility.UtilityResource" title="bioos.resource.utility.UtilityResource"><span class="pre">UtilityResource</span></a></span></span><a class="headerlink" href="#bioos.bioos.utility" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns Common tool collection Resource object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Tool collection Resource object</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="utility.html#bioos.resource.utility.UtilityResource" title="bioos.resource.utility.UtilityResource">UtilityResource</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Entry</a><ul>
+<li><a class="reference internal" href="#bioos">bioos</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="index.html"
+                          title="previous chapter">Welcome to bioos’s documentation!</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="resource.html"
+                          title="next chapter">Resource</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/entry.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="resource.html" title="Resource"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to bioos’s documentation!"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">bioos  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Entry</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, guangqiming.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
+    </div>
+  </body>
+</html>

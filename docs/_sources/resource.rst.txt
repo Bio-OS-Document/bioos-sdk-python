@@ -1,0 +1,34 @@
+Resource
+*********************
+
+files
+================
+
+.. automodule:: bioos.resource.files
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+data_models
+================
+
+.. automodule:: bioos.resource.data_models
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+workflows
+================
+
+.. automodule:: bioos.resource.workflows
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+workspaces
+================
+
+.. automodule:: bioos.resource.workspaces
+   :members:
+   :undoc-members:
+   :show-inheritance:

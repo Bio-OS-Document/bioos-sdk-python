@@ -1,0 +1,65 @@
+.. bioos documentation master file, created by
+sphinx-quickstart on Mon Oct 31 16:39:03 2022.
+You can adapt this file completely to your liking, but it should at least
+contain the root `toctree` directive.
+
+Welcome to bioos's documentation!
+=================================
+
+.. toctree::
+   :maxdepth: 3
+   :caption: Contents:
+
+       entry <entry.rst>
+
+       resource <resource.rst>
+
+       utility <utility.rst>
+
+       errors<errors.rst>
+
+.. figure:: _static/resource_hierarchical.png
+   :target: index.html
+
+   Resource Hierarchical Diagram
+
+
+Installation
+==================
+
+Note that bioos is currently still on test stage and has not been uploaded to pypi yet.
+Therefore, at present, you should install bioos via test-pypi by specifying *--extra--index-url* such as:
+
+*Example*:
+        ::
+
+            pip install -i https://test.pypi.org/pypi/ --extra-index-url https://pypi.org/simple bioos==0.0.1
+
+you can also install dependencies from *pypi* firstly and then install bioos from *test pypi* at next
+
+Quickstart
+==================
+*Example*:
+        ::
+
+            from bioos import bioos
+
+            # users have to login first.
+            # note that bioos will login automatically if it is used inside miracle private cloud.
+            bioos.login("http://aaa.bbb.ccc.ivolces.com", "AKLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXYmQ", "T1RXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX==")
+            # check current login status
+            print(bioos.status())
+
+            # instantiate the workspace to handle
+            ws = bioos.workspace("wceXXXXXXXXXXXXXX758g")
+            # show info about the workspace
+            print(ws)
+            # show all files info of the workspace
+            print(ws.files.list())
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`

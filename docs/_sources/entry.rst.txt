@@ -1,0 +1,11 @@
+Entry
+******************
+
+bioos
+==============
+
+.. autofunction:: bioos.bioos.login
+.. autofunction:: bioos.bioos.status
+.. autofunction:: bioos.bioos.list_workspaces
+.. autofunction:: bioos.bioos.workspace
+.. autofunction:: bioos.bioos.utility

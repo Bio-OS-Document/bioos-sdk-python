@@ -1,0 +1,7 @@
+Errors
+***********
+
+.. automodule:: bioos.errors
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Welcome to bioos’s documentation! &#8212; bioos  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Entry" href="entry.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="entry.html" title="Entry"
+             accesskey="N">next</a> |</li>
+        <li class="nav-item nav-item-0"><a href="#">bioos  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Welcome to bioos’s documentation!</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <p>sphinx-quickstart on Mon Oct 31 16:39:03 2022.
+You can adapt this file completely to your liking, but it should at least
+contain the root <cite>toctree</cite> directive.</p>
+<section id="welcome-to-bioos-s-documentation">
+<h1>Welcome to bioos’s documentation!<a class="headerlink" href="#welcome-to-bioos-s-documentation" title="Permalink to this heading">¶</a></h1>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="entry.html">    entry</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="entry.html#bioos">bioos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="resource.html">    resource</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="resource.html#module-bioos.resource.files">files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resource.html#module-bioos.resource.data_models">data_models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resource.html#module-bioos.resource.workflows">workflows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resource.html#module-bioos.resource.workspaces">workspaces</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="utility.html">    utility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="errors.html">    errors</a></li>
+</ul>
+</div>
+<figure class="align-default" id="id1">
+<a class="reference external image-reference" href="index.html"><img alt="_images/resource_hierarchical.png" src="_images/resource_hierarchical.png" /></a>
+<figcaption>
+<p><span class="caption-text">Resource Hierarchical Diagram</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">¶</a></h1>
+<p>Note that bioos is currently still on test stage and has not been uploaded to pypi yet.
+Therefore, at present, you should install bioos via test-pypi by specifying <em>–extra–index-url</em> such as:</p>
+<dl>
+<dt><em>Example</em>:</dt><dd><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">i</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">test</span><span class="o">.</span><span class="n">pypi</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">pypi</span><span class="o">/</span> <span class="o">--</span><span class="n">extra</span><span class="o">-</span><span class="n">index</span><span class="o">-</span><span class="n">url</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">pypi</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">simple</span> <span class="n">bioos</span><span class="o">==</span><span class="mf">0.0.1</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<p>you can also install dependencies from <em>pypi</em> firstly and then install bioos from <em>test pypi</em> at next</p>
+</section>
+<section id="quickstart">
+<h1>Quickstart<a class="headerlink" href="#quickstart" title="Permalink to this heading">¶</a></h1>
+<dl>
+<dt><em>Example</em>:</dt><dd><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bioos</span> <span class="kn">import</span> <span class="n">bioos</span>
+
+<span class="c1"># users have to login first.</span>
+<span class="c1"># note that bioos will login automatically if it is used inside miracle private cloud.</span>
+<span class="n">bioos</span><span class="o">.</span><span class="n">login</span><span class="p">(</span><span class="s2">&quot;http://aaa.bbb.ccc.ivolces.com&quot;</span><span class="p">,</span> <span class="s2">&quot;AKLXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXYmQ&quot;</span><span class="p">,</span> <span class="s2">&quot;T1RXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX==&quot;</span><span class="p">)</span>
+<span class="c1"># check current login status</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">bioos</span><span class="o">.</span><span class="n">status</span><span class="p">())</span>
+
+<span class="c1"># instantiate the workspace to handle</span>
+<span class="n">ws</span> <span class="o">=</span> <span class="n">bioos</span><span class="o">.</span><span class="n">workspace</span><span class="p">(</span><span class="s2">&quot;wceXXXXXXXXXXXXXX758g&quot;</span><span class="p">)</span>
+<span class="c1"># show info about the workspace</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ws</span><span class="p">)</span>
+<span class="c1"># show all files info of the workspace</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ws</span><span class="o">.</span><span class="n">files</span><span class="o">.</span><span class="n">list</span><span class="p">())</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</section>
+<section id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this heading">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="#">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Welcome to bioos’s documentation!</a></li>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#quickstart">Quickstart</a></li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="entry.html"
+                          title="next chapter">Entry</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="entry.html" title="Entry"
+             >next</a> |</li>
+        <li class="nav-item nav-item-0"><a href="#">bioos  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Welcome to bioos’s documentation!</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, guangqiming.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
+    </div>
+  </body>
+</html>
