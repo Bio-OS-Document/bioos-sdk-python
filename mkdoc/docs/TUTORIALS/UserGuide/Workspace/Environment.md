@@ -1,0 +1,2 @@
+在Miracle Cloud中，您可以对为当前的Workspace中的工作流或者Notebook选择关联的集群。点击左侧菜单中的环境管理可以看到当前的资源信息。工作流和Notebooks都只能关联一个集群，关联后当前Workspace的工作流将会投递到关联的集群中，Notebook也会从关联集群中进行启动。工作流和Notebook可以选择关联不同集群，更换关联集群需要解除关联后再重新关联新的集群。
+![](https://portal.volccdn.com/obj/volcfe/cloud-universal-doc/upload_666db4daff428dfdad997c65cbb3e6fc.png)
